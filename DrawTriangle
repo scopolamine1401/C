@@ -1,0 +1,35 @@
+#include <stdio.h>
+int main ()
+{
+int space,
+	star,
+	number_of_space,
+	number_of_star,
+	triangle_height,
+	remaining_line;
+	
+scanf ("%d", &triangle_height);
+
+number_of_star = 1;
+number_of_space = triangle_height;
+
+for (remaining_line = triangle_height;  remaining_line > 0; remaining_line--)
+	{
+		for (space = 1; space < number_of_space; space++ )
+			{
+				printf(" ");
+			}
+		
+		
+		for (star = 1; star < number_of_star + 1; star++)
+			{
+				printf("*");
+			}
+			
+		printf("\n");
+		
+		number_of_space -= 1;
+		number_of_star += 2;
+	}
+return 0;
+}
